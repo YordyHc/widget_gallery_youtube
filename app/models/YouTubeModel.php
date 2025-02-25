@@ -1,41 +1,25 @@
 <?php
 
-// Incluir el archivo de configuración
 require_once 'config.php';
 
-// Modelo para interactuar con la API de YouTube
+
 class YouTubeModel {
     private $apiKey;
     private $channelId;
 
     public function __construct() {
-        $this->apiKey = API_KEY; // Usar las constantes definidas en config.php
+        $this->apiKey = API_KEY; 
         $this->channelId = CHANNEL_ID;
     }
 
-    // Tu clave de API de YouTube
-    //private $apiKey = 'AIzaSyBoW8tsNBBj2nngMlHhThyLjmLkqGr4D9w';
-    //private $channelId = 'UCCfPkh8osJPC2pPq283kKXg';
-    
-    // Método para obtener los videos del canal
-    /*public function getVideos() {
-        $maxResults = 50; // Obtener más videos de una sola vez
-
-        $url = "https://www.googleapis.com/youtube/v3/search?key=$this->apiKey&channelId=$this->channelId&part=snippet,id&order=date&maxResults=$maxResults";
-        $response = file_get_contents($url);
-        $data = json_decode($response, true);
-        $videos = array_filter($data['items'], fn($video) => isset($video['id']['videoId']));
-        return $videos;
-    }*/
     public function get_dat_videos(){
-        $maxResults = 30; // Obtener más videos de una sola vez
+        $maxResults = 30; 
         $url = "https://www.googleapis.com/youtube/v3/search?key=$this->apiKey&channelId=$this->channelId&part=snippet,id&order=date&maxResults=$maxResults";
         
         $response = file_get_contents($url);
         $data = json_decode($response, true);
         $videos = array_filter($data['items'], fn($video) => isset($video['id']['videoId']));
 
-        // Obtener estadísticas en una sola petición para optimizar
         $videoIds = implode(",", array_map(fn($v) => $v['id']['videoId'], $videos));
         $statsUrl = "https://www.googleapis.com/youtube/v3/videos?key=$this->apiKey&id=$videoIds&part=statistics,contentDetails";
         $statsResponse = file_get_contents($statsUrl);
@@ -53,7 +37,6 @@ class YouTubeModel {
             ];
         }
 
-        // Agregar estadísticas al array de videos
         return array_map(function ($video) use ($statsMap) {
             $id = $video['id']['videoId'];
             return [

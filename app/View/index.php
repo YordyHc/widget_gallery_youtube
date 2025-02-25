@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
         .header-container {
-            width: 100%;  /* Ancho total de la pantalla */
-            height: 34vh;  /* Ajustable según necesidad */
+            width: 100%;  /
+            height: 34vh; 
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -19,20 +19,20 @@
         .header-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Mantiene el área cubierta sin franjas negras */
-            object-position: center; /* Mantiene el centro de la imagen */
-            transition: transform 0.4s ease; /* Suaviza la animación del zoom */
+            object-fit: cover; 
+            object-position: center; 
+            transition: transform 0.4s ease; 
         }
 
         @media (max-width: 768px) {
             .header-container img {
-                transform: scale(3.3); /* Aplica un zoom cuando la pantalla es más pequeña */
+                transform: scale(3.3); 
             }
         }
 
         @media (max-width: 480px) {
             .header-container img {
-                transform: scale(1.7); /* Aumenta más el zoom para centrarse en el personaje */
+                transform: scale(1.7); 
             }
         }
         .profile {
@@ -40,7 +40,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-top: -50px; /* Para superponer la imagen de perfil */
+            margin-top: -50px; 
         }
 
         .profile img { 
@@ -135,10 +135,10 @@
             }
         }
         .play-button::before {
-            content: "▶\FE0E"; /* Agrega U+FE0E para evitar el fondo azul */
+            content: "▶\FE0E"; 
             color: white;
             font-size: 24px;
-            font-family: Arial, sans-serif; /* Asegura una fuente sin emoji */
+            font-family: Arial, sans-serif;
         }
         .video-duration {
             position: absolute;
@@ -172,11 +172,11 @@
         }
 
         .gallery-prev {
-            left: 5px; /* Ajusta según sea necesario */
+            left: 5px; 
         }
 
         .gallery-next {
-            right: 5px; /* Ajusta según sea necesario */
+            right: 5px; 
         }
 
         @media (max-width: 768px) {
@@ -190,19 +190,19 @@
 
         .video {
             width: 420px;
-            height: 237px; /* Define el ancho del contenedor */
+            height: 237px;
             position: relative;
             cursor: pointer;
         }
 
         .video-title {
-            white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-            overflow: hidden; /* Esconde el texto que se desborda */
-            text-overflow: ellipsis; /* Muestra "..." cuando el texto es demasiado largo */
-            width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
-            display: block; /* Asegura que el texto esté en bloque y se ajuste correctamente */
-            font-size: 16px; /* Tamaño de fuente para el título */
-            line-height: 1.2em; /* Ajusta el interlineado */
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            width: 100%; 
+            display: block; 
+            font-size: 16px; 
+            line-height: 1.2em; 
         }
 
         .video-info { font-size: 14px; color: gray; }
@@ -212,7 +212,7 @@
         .pagination button { margin: 5px; padding: 8px 12px; border: 1px solid #ddd; background: white; cursor: pointer; }
         .pagination .active { background: black; color: white; }
         .modal {
-            display: none; /* Oculto por defecto */
+            display: none; 
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -234,17 +234,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow: hidden; /* Oculta cualquier desbordamiento */
+            overflow: hidden;
         }
         
-        /* Botón de cerrar */
+       
         .close {
             position: absolute;
-            top: 69px; /* Sube la 'X' fuera del modal */
-            right: 16px; /* La mueve un poco fuera del modal */
+            top: 69px; 
+            right: 16px; 
             font-size: 20px;
             cursor: pointer;
-            z-index: 100; /* Asegura que esté sobre todo */
+            z-index: 100; 
             background: rgba(255, 255, 255, 0.555);
             padding: 10px 15px;
             border-radius: 50%;
@@ -255,25 +255,24 @@
         }
 
         
-        /* Contenedor del iframe con recorte */
         .iframe-container {
             width: 100%;
-            height: 450px; /* Ajusta la altura del recorte */
+            height: 450px; 
             position: relative;
-            overflow: hidden; /* Oculta las partes no deseadas */
+            overflow: hidden; 
         }
         
-        /* Ajusta el iframe para que ocupe más espacio y se recorte */
+        
         .iframe-container iframe {
             position: absolute;
-            top: 0%; /* Recorta la parte superior */
-            left: 0%; /* Recorta los lados */
+            top: 0%; 
+            left: 0%; 
             width: 100%;
             height: 100%;
             border: none;
         }
         
-        /* Contenido extra debajo del iframe */
+        
         .modal-extra-content {
             padding: 20px;
             text-align: left;
@@ -345,7 +344,7 @@
 
         function playVideo(videoId) {
             alert("Reproduciendo video: " + videoId);
-            // Aquí puedes abrir una ventana modal o redirigir al video en YouTube
+            
         }
     </script>
 </head>
@@ -378,12 +377,12 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
 
-                <!-- Contenedor del video con recorte -->
+                
                 <div class="iframe-container">
                     <iframe id="videoFrame" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
-                <!-- Contenido extra debajo del video -->
+                
                 <div class="modal-extra-content">
                     <p id="modal_titulo" style="font-size: 25px"></p>
                     <p id="md_views"></p>
@@ -397,23 +396,21 @@
         var videoFrame = document.getElementById("videoFrame");
 
         function playvideo(id_video, titulo, vista) {
-            modal.style.display = "flex"; // Mostrar la modal
+            modal.style.display = "flex"; 
             videoFrame.src = "https://www.youtube.com/embed/" + id_video + "?si=bAtHCHmwT3C25Gry&autoplay=1&rel=0";
             document.getElementById("modal_titulo").innerText = titulo;
             document.getElementById("md_views").innerText = vista+' vistas';
         }
 
-        // Cerrar modal al hacer clic en la 'X'
         closeBtn.onclick = function() {
             modal.style.display = "none";
-            videoFrame.src = ""; // Detener el video al cerrar
+            videoFrame.src = ""; 
         }
 
-        // Cerrar modal si el usuario hace clic fuera del contenido
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
-                videoFrame.src = ""; // Detener el video al cerrar
+                videoFrame.src = ""; 
             }
         }
     </script>
