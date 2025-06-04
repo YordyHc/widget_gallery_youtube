@@ -1,0 +1,32 @@
+[
+  {
+    "videoId": "abc123",
+    "title": "#FakeNews | Entrevista con Juan Pérez sobre inteligencia artificial",
+    "thumbnail": "https://placehold.co/480x360?text=Video+1",
+    "publishedAt": "2025-05-23T14:30:00Z",
+    "views": 158000,
+    "likes": 3200,
+    "comments": 120,
+    "duration": "02:15"
+  },
+  {
+    "videoId": "def456",
+    "title": "Los mejores momentos del mes",
+    "thumbnail": "https://placehold.co/480x360/orange/white?text=Video+2",
+    "publishedAt": "2025-05-22T17:45:00Z",
+    "views": 89000,
+    "likes": 2100,
+    "comments": 80,
+    "duration": "03:41"
+  },
+  {
+    "videoId": "ghi789",
+    "title": "Invitado sorpresa habla de inteligencia artificial",
+    "thumbnail": "https://placehold.co/480x360?text=Video+3",
+    "publishedAt": "2025-05-21T19:10:00Z",
+    "views": 123456,
+    "likes": 4567,
+    "comments": 234,
+    "duration": "05:09"
+  }
+]

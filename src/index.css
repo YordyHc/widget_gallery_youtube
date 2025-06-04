@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.channel-header {
+  background-color: white;
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.channel-header img.logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.channel-banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.video-gallery {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.video-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+}
+
+.video-card .info {
+  padding: 1rem;
+}
+
+.video-card .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.video-card .meta {
+  font-size: 0.875rem;
+  color: #666;
+}
