@@ -15,7 +15,17 @@ function App() {
 
     fetch("/data/videos.json")
       .then((res) => res.json())
-      .then((data) => setVideos(data))
+      .then((data) => {
+        const formattedVideos = data.items.map((item) => ({
+          videoId: item.id.videoId,
+          title: item.snippet.title,
+          thumbnail: item.snippet.thumbnails.high.url,
+          views: Math.floor(Math.random() * 1000000), // Simulado
+          duration: "4:00", // Simulado
+        }));
+
+        setVideos(formattedVideos);
+      })
       .catch((err) => console.error("Error loading videos.json:", err));
   }, []);
 
