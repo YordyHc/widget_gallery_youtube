@@ -1,33 +1,78 @@
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
   background: #f4f4f4;
   color: #333;
 }
+/*-------------cabecera*/
 
 .channel-header {
   background-color: white;
   padding: 1.5rem;
   border-bottom: 1px solid #ddd;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
-
-.channel-header img.logo {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
 .channel-banner {
   width: 100%;
-  max-height: 300px;
+  aspect-ratio: 100 / 16.53;
   object-fit: cover;
   margin-bottom: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+.profile {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: -50px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.profile h2 {
+  font-size: 22px;
+  margin: 0;
+}
+.profile div a {
+  text-decoration: none;
+  color: #000000;
+}
+.profile div a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+.stats {
+  font-size: 15px;
+  color: rgb(94, 94, 94);
+  margin-top: 5px;
+}
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 830px;
+  gap: 5px;
+  background-color: #ff0000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #cc0000;
+}
+
+/*------GALERIA*/
 
 .video-gallery {
   display: grid;

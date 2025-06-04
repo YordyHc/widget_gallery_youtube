@@ -14,25 +14,45 @@ function ChannelHeader({ channel }) {
   return (
     <div className="channel-header">
       {betterBanner && (
-        <img
-          className="channel-banner"
-          src={betterBanner}
-          alt="Banner del canal"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = bannerUrl; // fallback a la versión sin filtros
-          }}
-        />
+        <>
+          <img
+            className="channel-banner"
+            src={betterBanner}
+            alt="Banner del canal"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = bannerUrl;
+            }}
+          />
+          <br />
+          <br />
+        </>
       )}
 
-      {logoUrl && <img className="logo" src={logoUrl} alt="Logo del canal" />}
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <p>
-        <strong>{Number(stats?.subscriberCount).toLocaleString()}</strong>{" "}
-        suscriptores • <strong>{stats?.videoCount}</strong> videos •{" "}
-        <strong>{Number(stats?.viewCount).toLocaleString()}</strong> vistas
-      </p>
+      <div className="profile">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        {logoUrl && <img className="logo" src={logoUrl} alt="Logo del canal" />}
+        <div>
+          <br />
+          <h2>
+            <a href={`https://www.youtube.com/channel/${title}`}>{title}</a>
+          </h2>
+          <p className="stats">
+            {Number(stats?.subscriberCount)} suscriptores • {stats?.videoCount}
+            videos • {Number(stats?.viewCount)} vistas
+          </p>
+        </div>
+        <a
+          className="subscribe-btn btn-danger"
+          href={`https://www.youtube.com/channel/${title}`}
+        >
+          Youtube 32M
+        </a>
+      </div>
     </div>
   );
 }
