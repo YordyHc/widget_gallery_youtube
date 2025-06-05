@@ -24,8 +24,6 @@ function ChannelHeader({ channel }) {
               e.target.src = bannerUrl;
             }}
           />
-          <br />
-          <br />
         </>
       )}
 
@@ -35,19 +33,23 @@ function ChannelHeader({ channel }) {
         <br />
         <br />
         <br />
-        {logoUrl && <img className="logo" src={logoUrl} alt="Logo del canal" />}
-        <div>
+        <a href={`https://www.youtube.com/channel/${title}`}>
+          {logoUrl && (
+            <img className="logo" src={logoUrl} alt="Logo del canal" />
+          )}
+        </a>
+        <div className="pf-data">
           <br />
           <h2>
             <a href={`https://www.youtube.com/channel/${title}`}>{title}</a>
           </h2>
           <p className="stats">
-            {Number(stats?.subscriberCount)} suscriptores • {stats?.videoCount}
+            {Number(stats?.subscriberCount)} suscriptores • {stats?.videoCount}{" "}
             videos • {Number(stats?.viewCount)} vistas
           </p>
         </div>
         <a
-          className="subscribe-btn btn-danger"
+          className="subscribe-btn"
           href={`https://www.youtube.com/channel/${title}`}
         >
           Youtube 32M
