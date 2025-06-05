@@ -97,7 +97,7 @@ body {
 
 /*------GALERIA*/
 
-.video-gallery {
+/*.video-gallery {
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
@@ -135,3 +135,4 @@ body {
   font-size: 0.875rem;
   color: #666;
 }
+*/

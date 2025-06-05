@@ -8,7 +8,7 @@ function ChannelHeader({ channel }) {
     bannerUrl + "=w2560-fcrop64=1,00000000ffffffff-nd-c0xffffffff-rj-k-no";
   const logoUrl = channelData.snippet?.thumbnails?.medium?.url;
   const title = channelData.snippet?.title || "Sin título";
-  const description = channelData.snippet?.description || "Sin descripción";
+  //const description = channelData.snippet?.description || "Sin descripción";
   const stats = channelData.statistics;
 
   return (
@@ -51,8 +51,10 @@ function ChannelHeader({ channel }) {
         <a
           className="subscribe-btn"
           href={`https://www.youtube.com/channel/${title}`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Youtube 32M
+          Youtube {stats?.subscriberCount}
         </a>
       </div>
     </div>
