@@ -1,305 +1,305 @@
 {
   "kind": "youtube#videoListResponse",
-  "etag": "etag_ficticio_123456789",
+  "etag": "BM0H7wluf5YrIdInYQDuOgtGGyI",
   "items": [
     {
       "kind": "youtube#video",
-      "etag": "etag_video_1",
-      "id": "videoId000000001",
+      "etag": "OxIc6oa9r2JBDnrnQTjJDYP23Eg",
+      "id": "kK1pl7ALBI4",
       "contentDetails": {
-        "duration": "PT5M30S",
+        "duration": "PT26S",
         "dimension": "2d",
         "definition": "hd",
         "caption": "false",
         "licensedContent": true,
+        "contentRating": {},
         "projection": "rectangular"
       },
       "statistics": {
-        "viewCount": "15000",
-        "likeCount": "1200",
-        "dislikeCount": "30",
+        "viewCount": "12812",
+        "likeCount": "1351",
         "favoriteCount": "0",
-        "commentCount": "300"
+        "commentCount": "52"
       }
     },
     {
       "kind": "youtube#video",
-      "etag": "etag_video_2",
-      "id": "videoId000000002",
+      "etag": "c4uEZcSh90_F9OLu4MGnHXEHgNQ",
+      "id": "VrcJnekv6fo",
       "contentDetails": {
-        "duration": "PT10M15S",
-        "dimension": "2d",
-        "definition": "sd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "8700",
-        "likeCount": "540",
-        "dislikeCount": "12",
-        "favoriteCount": "0",
-        "commentCount": "150"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_3",
-      "id": "videoId000000003",
-      "contentDetails": {
-        "duration": "PT2M45S",
+        "duration": "PT3M34S",
         "dimension": "2d",
         "definition": "hd",
         "caption": "false",
         "licensedContent": true,
+        "contentRating": {},
         "projection": "rectangular"
       },
       "statistics": {
-        "viewCount": "23000",
-        "likeCount": "1800",
-        "dislikeCount": "45",
+        "viewCount": "74256",
+        "likeCount": "3064",
         "favoriteCount": "0",
-        "commentCount": "420"
+        "commentCount": "109"
       }
     },
     {
       "kind": "youtube#video",
-      "etag": "etag_video_4",
-      "id": "videoId000000004",
+      "etag": "mFsOTGPKCJHzCEGDAxIt6V-_sC0",
+      "id": "0AakbtyfADQ",
       "contentDetails": {
-        "duration": "PT7M20S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "5000",
-        "likeCount": "450",
-        "dislikeCount": "5",
-        "favoriteCount": "0",
-        "commentCount": "90"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_5",
-      "id": "videoId000000005",
-      "contentDetails": {
-        "duration": "PT3M10S",
-        "dimension": "2d",
-        "definition": "sd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "12500",
-        "likeCount": "1100",
-        "dislikeCount": "25",
-        "favoriteCount": "0",
-        "commentCount": "260"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_6",
-      "id": "videoId000000006",
-      "contentDetails": {
-        "duration": "PT12M00S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "32000",
-        "likeCount": "2500",
-        "dislikeCount": "60",
-        "favoriteCount": "0",
-        "commentCount": "530"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_7",
-      "id": "videoId000000007",
-      "contentDetails": {
-        "duration": "PT4M50S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "9000",
-        "likeCount": "800",
-        "dislikeCount": "18",
-        "favoriteCount": "0",
-        "commentCount": "210"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_8",
-      "id": "videoId000000008",
-      "contentDetails": {
-        "duration": "PT6M25S",
-        "dimension": "2d",
-        "definition": "sd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "14000",
-        "likeCount": "1150",
-        "dislikeCount": "22",
-        "favoriteCount": "0",
-        "commentCount": "310"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_9",
-      "id": "videoId000000009",
-      "contentDetails": {
-        "duration": "PT9M40S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "21000",
-        "likeCount": "1600",
-        "dislikeCount": "40",
-        "favoriteCount": "0",
-        "commentCount": "410"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_10",
-      "id": "videoId000000010",
-      "contentDetails": {
-        "duration": "PT8M55S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "18000",
-        "likeCount": "1350",
-        "dislikeCount": "28",
-        "favoriteCount": "0",
-        "commentCount": "350"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_11",
-      "id": "videoId000000011",
-      "contentDetails": {
-        "duration": "PT11M05S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "27500",
-        "likeCount": "2200",
-        "dislikeCount": "50",
-        "favoriteCount": "0",
-        "commentCount": "480"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_12",
-      "id": "videoId000000012",
-      "contentDetails": {
-        "duration": "PT1M45S",
-        "dimension": "2d",
-        "definition": "sd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "6000",
-        "likeCount": "480",
-        "dislikeCount": "10",
-        "favoriteCount": "0",
-        "commentCount": "120"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_13",
-      "id": "videoId000000013",
-      "contentDetails": {
-        "duration": "PT3M30S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": false,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "11500",
-        "likeCount": "900",
-        "dislikeCount": "19",
-        "favoriteCount": "0",
-        "commentCount": "250"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_14",
-      "id": "videoId000000014",
-      "contentDetails": {
-        "duration": "PT7M05S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "false",
-        "licensedContent": true,
-        "projection": "rectangular"
-      },
-      "statistics": {
-        "viewCount": "13000",
-        "likeCount": "980",
-        "dislikeCount": "21",
-        "favoriteCount": "0",
-        "commentCount": "280"
-      }
-    },
-    {
-      "kind": "youtube#video",
-      "etag": "etag_video_15",
-      "id": "videoId000000015",
-      "contentDetails": {
-        "duration": "PT7M50S",
+        "duration": "PT3M15S",
         "dimension": "2d",
         "definition": "hd",
         "caption": "false",
         "licensedContent": false,
+        "contentRating": {},
         "projection": "rectangular"
       },
       "statistics": {
-        "viewCount": "11000",
-        "likeCount": "760",
-        "dislikeCount": "20",
+        "viewCount": "78521",
+        "likeCount": "3496",
         "favoriteCount": "0",
-        "commentCount": "230"
+        "commentCount": "118"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "trI1EJADLK76yerajCcJGQcue28",
+      "id": "cgfsMHmLtMg",
+      "contentDetails": {
+        "duration": "PT3M32S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "54131",
+        "likeCount": "1796",
+        "favoriteCount": "0",
+        "commentCount": "84"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "fW7iovzTKpXH9-GjJQMnef1KeNA",
+      "id": "Wd7NaVGueHE",
+      "contentDetails": {
+        "duration": "PT3M37S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "42218",
+        "likeCount": "1486",
+        "favoriteCount": "0",
+        "commentCount": "108"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "OQjr3g72bsniEZwAI6a4zfgCanI",
+      "id": "Vf1Q86GvpgY",
+      "contentDetails": {
+        "duration": "PT1M19S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "22324",
+        "likeCount": "466",
+        "favoriteCount": "0",
+        "commentCount": "18"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "A0s6So04xOBSDKsiQ7-alAwPDNA",
+      "id": "juC4N6f1eAY",
+      "contentDetails": {
+        "duration": "PT4M59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "281659",
+        "likeCount": "8524",
+        "favoriteCount": "0",
+        "commentCount": "236"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "mBXcTGKaWfoZoVSzyGxHRlgJ3Z0",
+      "id": "ZVC2ogmYQu4",
+      "contentDetails": {
+        "duration": "PT1M47S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "24483",
+        "likeCount": "1097",
+        "favoriteCount": "0",
+        "commentCount": "46"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "Lsdm9Cj-7HLWPonxRdf9LJHZGQU",
+      "id": "XljdW0SO-xo",
+      "contentDetails": {
+        "duration": "PT3M33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "56016",
+        "likeCount": "2201",
+        "favoriteCount": "0",
+        "commentCount": "84"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "l1M2h51n6w7tdWrzhkFxNfI8IXU",
+      "id": "LPyb4nu0o3Y",
+      "contentDetails": {
+        "duration": "PT3M52S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "59238",
+        "likeCount": "2063",
+        "favoriteCount": "0",
+        "commentCount": "75"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "6RXtDzKTNMRGga_s5WAegtPfQRo",
+      "id": "HkEE4TGCQew",
+      "contentDetails": {
+        "duration": "PT2M31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "110069",
+        "likeCount": "2185",
+        "favoriteCount": "0",
+        "commentCount": "75"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "qkm1xlONT6_S4IuX_L4D5Mztokw",
+      "id": "4RtYxDi4lwg",
+      "contentDetails": {
+        "duration": "PT4M36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "119113",
+        "likeCount": "6697",
+        "favoriteCount": "0",
+        "commentCount": "258"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "9E2ytYglSozaT-CxRD0z_y29wFQ",
+      "id": "aK3QnbRk5JM",
+      "contentDetails": {
+        "duration": "PT2M33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "26740",
+        "likeCount": "996",
+        "favoriteCount": "0",
+        "commentCount": "33"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "nG0IY72JitjTfQprc3IiPbzRzbo",
+      "id": "FmxI116a46w",
+      "contentDetails": {
+        "duration": "PT2M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "37971",
+        "likeCount": "1129",
+        "favoriteCount": "0",
+        "commentCount": "46"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "8qfphjoDPE-fE4C1_PiaDGOdIWk",
+      "id": "zfh6MQHadjc",
+      "contentDetails": {
+        "duration": "PT6M3S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "140447",
+        "likeCount": "4703",
+        "favoriteCount": "0",
+        "commentCount": "167"
       }
     }
   ],

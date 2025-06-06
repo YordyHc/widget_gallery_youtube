@@ -8,28 +8,42 @@ function App() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+    // Cargar datos del canal
     fetch("/data/channel.json")
       .then((res) => res.json())
       .then((data) => setChannel(data))
       .catch((err) => console.error("Error loading channel.json:", err));
 
-    fetch("/data/videos.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const formattedVideos = data.items.map((item) => ({
-          videoId: item.id.videoId,
-          title: item.snippet.title,
-          thumbnail: item.snippet.thumbnails.high.url,
-          views: Math.floor(Math.random() * 1000000), // Simulado
-          duration: "4:00", // Simulado
-        }));
+    // Cargar datos de videos y estadísticas en paralelo
+    Promise.all([
+      fetch("/data/videos.json").then((res) => res.json()),
+      fetch("/data/stats.json").then((res) => res.json()),
+    ])
+      .then(([videosData, statsData]) => {
+        const videoInfo = videosData.items.map((video) => {
+          const videoId = video.id.videoId;
+          const stats = statsData.items.find((stat) => stat.id === videoId);
 
-        setVideos(formattedVideos);
+          return {
+            videoId,
+            thumbnail: video.snippet.thumbnails.high.url,
+            title: video.snippet.title,
+            fecha: video.snippet.publishedAt,
+            description: video.snippet.description,
+            views: stats?.statistics?.viewCount || "0",
+            likes: stats?.statistics?.likeCount || "0",
+            comments: stats?.statistics?.commentCount || "0",
+          };
+        });
+
+        setVideos(videoInfo);
       })
-      .catch((err) => console.error("Error loading videos.json:", err));
+      .catch((err) => console.error("Error loading videos or stats:", err));
   }, []);
 
-  if (!channel) return <p>Cargando...</p>;
+  if (!channel || videos.length === 0) {
+    return <p>Cargando...</p>;
+  }
 
   return (
     <>
