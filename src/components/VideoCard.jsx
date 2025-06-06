@@ -1,9 +1,15 @@
 function VideoCard({ video }) {
   return (
-    <div className="video-card">
-      <img src={video.thumbnail} alt={`Miniatura de ${video.title}`} />
-      <button className="play-button">waa</button>
-      <span className="video-duration">{video.duration}</span>
+    <div className="video">
+      <div className="miniatura">
+        <img
+          src={video.thumbnail}
+          className="thumbnail"
+          alt={`Miniatura de ${video.title}`}
+        />
+        <button className="play-button"></button>
+        <span className="video-duration">{video.duration}</span>
+      </div>
       <p className="video-title">
         <strong>{video.title}</strong>
       </p>

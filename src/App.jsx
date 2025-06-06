@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ChannelHeader from "./components/ChannelHeader";
 import VideoGallery from "./components/VideoGallery";
 import "./index.css";
+import "./assets/galeria.css";
 
 function App() {
   const [channel, setChannel] = useState(null);
@@ -30,6 +31,7 @@ function App() {
             title: video.snippet.title,
             fecha: video.snippet.publishedAt,
             description: video.snippet.description,
+            duration: stats?.contentDetails?.duration || "00:00",
             views: stats?.statistics?.viewCount || "0",
             likes: stats?.statistics?.likeCount || "0",
             comments: stats?.statistics?.commentCount || "0",
