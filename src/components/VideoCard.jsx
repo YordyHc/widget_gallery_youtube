@@ -1,13 +1,13 @@
-function VideoCard({ video }) {
+function VideoCard({ video, onPlay }) {
   return (
     <div className="video">
-      <div className="miniatura">
+      <div className="miniatura" onClick={onPlay}>
         <img
           src={video.thumbnail}
           className="thumbnail"
           alt={`Miniatura de ${video.title}`}
         />
-        <button className="play-button"></button>
+        <button className="play-button" onClick={onPlay}></button>
         <span className="video-duration">{video.duration}</span>
       </div>
       <p className="video-title">
