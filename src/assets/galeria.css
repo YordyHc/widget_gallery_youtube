@@ -127,3 +127,26 @@
     right: 5px;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 5px;
+}
+
+.paginat-btn {
+  padding: 2px 9px;
+  background-color: #dfdfdf;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.paginat-btn:hover {
+  background-color: #b4b4b4;
+}
+
+.paginat-btn.active {
+  background-color: #b4b4b4;
+}

@@ -30,6 +30,19 @@ function VideoGallery({ videos }) {
       <button className="gallery-nav-btn gallery-next" onClick={handleNext}>
         ≫
       </button>
+      <br />
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index}
+            className={`paginat-btn ${index === currentPage ? "active" : ""}`}
+            onClick={() => setCurrentPage(index)}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
+      <br />
     </div>
   );
 }
