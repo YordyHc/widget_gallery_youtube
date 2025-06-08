@@ -156,26 +156,41 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Importante: permite que el modal ocupe toda la pantalla */
   background: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centrado horizontal */
+  padding-top: 4%;
   z-index: 999;
 }
 
 .modal-content {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 800px;
-  position: relative;
+  background-color: none;
+  width: 71%;
+  overflow-y: auto; /* Permite scroll vertical */
 }
 
+.video-iframe-container {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.video-iframe-container iframe {
+  width: 100%; /* o un valor fijo, como 800px */
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+.modal-info {
+  background-color: #ede6e6;
+  padding: 2%;
+}
+.md_title {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 .modal-close {
-  color: aliceblue;
-  background-color: #dfdfdf;
   position: absolute;
   top: 0.5rem;
   right: 1rem;
@@ -183,20 +198,4 @@
   background: none;
   border: none;
   cursor: pointer;
-}
-
-.video-iframe-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.video-iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }

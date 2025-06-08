@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ChannelHeader from "./components/ChannelHeader";
 import VideoGallery from "./components/VideoGallery";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import "./assets/galeria.css";
 

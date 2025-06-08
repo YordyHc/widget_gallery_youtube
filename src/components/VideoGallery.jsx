@@ -44,7 +44,7 @@ function VideoGallery({ videos }) {
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
-            className={`page-btn ${index === currentPage ? "active" : ""}`}
+            className={`paginat-btn ${index === currentPage ? "active" : ""}`}
             onClick={() => setCurrentPage(index)}
           >
             {index + 1}
@@ -59,7 +59,6 @@ function VideoGallery({ videos }) {
             <button className="modal-close" onClick={() => setModalVideo(null)}>
               ×
             </button>
-            <h2>{modalVideo.title}</h2>
             <div className="video-iframe-container">
               <iframe
                 width="100%"
@@ -71,7 +70,16 @@ function VideoGallery({ videos }) {
                 title={modalVideo.title}
               ></iframe>
             </div>
-            <p>{modalVideo.description}</p>
+            <div className="modal-info">
+              <h3 className="md_title">{modalVideo.title}</h3>
+              <p>{modalVideo.description}</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+                veritatis, dolorem repellat libero dicta laboriosam adipisci ad
+                nobis ratione possimus ut tenetur sint, animi mollitia
+                laudantium asperiores deserunt temporibus rerum.
+              </p>
+            </div>
           </div>
         </div>
       )}
