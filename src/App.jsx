@@ -51,7 +51,7 @@ function App() {
   return (
     <>
       <ChannelHeader channel={channel} />
-      <VideoGallery videos={videos} />
+      <VideoGallery videos={videos} perfil={channel} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import VideoCard from "./VideoCard";
 
-function VideoGallery({ videos }) {
+function VideoGallery({ videos, perfil }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [modalVideo, setModalVideo] = useState(null);
 
@@ -10,6 +10,12 @@ function VideoGallery({ videos }) {
 
   const startIndex = currentPage * itemsPerPage;
   const currentVideos = videos.slice(startIndex, startIndex + itemsPerPage);
+
+  const channelData = perfil.items?.[0];
+  const logoUrl = channelData.snippet?.thumbnails?.medium?.url;
+  const title = channelData.snippet?.title || "Sin título";
+  //const description = channelData.snippet?.description || "Sin descripción";
+  const stats = channelData.statistics;
 
   const handlePrev = () => {
     setCurrentPage((prev) => Math.max(prev - 1, 0));
@@ -72,13 +78,34 @@ function VideoGallery({ videos }) {
             </div>
             <div className="modal-info">
               <h3 className="md_title">{modalVideo.title}</h3>
-              <p>{modalVideo.description}</p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
-                veritatis, dolorem repellat libero dicta laboriosam adipisci ad
-                nobis ratione possimus ut tenetur sint, animi mollitia
-                laudantium asperiores deserunt temporibus rerum.
-              </p>
+              <div className="md-stats">
+                <p className="video-info">{modalVideo.views} vistas </p>
+                <p className="video-info">{modalVideo.likes}</p>
+              </div>
+              <div className="profile">
+                <a href={`https://www.youtube.com/channel/${title}`}>
+                  {logoUrl && (
+                    <img className="logo" src={logoUrl} alt="Logo del canal" />
+                  )}
+                </a>
+                <div className="pf-data">
+                  <br />
+                  <h2>
+                    <a href={`https://www.youtube.com/channel/${title}`}>
+                      {title}
+                    </a>
+                  </h2>
+                  <p className="video-description">{modalVideo.description}</p>
+                </div>
+                <a
+                  className="subscribe-btn"
+                  href={`https://www.youtube.com/channel/${title}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Youtube {stats?.subscriberCount}
+                </a>
+              </div>
             </div>
           </div>
         </div>
