@@ -183,14 +183,21 @@
   aspect-ratio: 16 / 9;
   border: none;
 }
+.md-stats {
+  border-bottom: #bebebe 1px solid;
+  display: flex;
+  gap: 70%;
+  height: 30px;
+}
 .modal-info {
-  background-color: #ede6e6;
+  background-color: #ffffff;
   padding: 2%;
 }
 .md_title {
   padding-top: 1%;
   padding-bottom: 1%;
 }
+
 .modal-close {
   position: absolute;
   top: 0.5rem;
@@ -199,4 +206,50 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.profile-md {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  align-items: start;
+  padding-top: 18px;
+}
+
+.profile-md img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.profile-md h2 {
+  font-size: 22px;
+}
+.profile-md div a {
+  text-decoration: none;
+  color: #000000;
+}
+.profile-md div a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.md-info {
+  font-size: 14px;
+  color: rgb(138, 138, 138);
+}
+.md-info-fecha {
+  font-size: 13px;
+  color: rgb(108, 108, 108);
+}
+
+.md-description {
+  font-size: 14px;
+}
+
+.likes {
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: #0091ff 2px solid;
 }

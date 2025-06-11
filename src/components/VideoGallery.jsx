@@ -79,23 +79,35 @@ function VideoGallery({ videos, perfil }) {
             <div className="modal-info">
               <h3 className="md_title">{modalVideo.title}</h3>
               <div className="md-stats">
-                <p className="video-info">{modalVideo.views} vistas </p>
-                <p className="video-info">{modalVideo.likes}</p>
+                <p className="md-info">{modalVideo.views} vistas </p>
+                <p className="md-info likes">{modalVideo.likes}</p>
               </div>
-              <div className="profile">
-                <a href={`https://www.youtube.com/channel/${title}`}>
+              <div className="profile-md">
+                <a
+                  href={`https://www.youtube.com/channel/${title}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {logoUrl && (
                     <img className="logo" src={logoUrl} alt="Logo del canal" />
                   )}
                 </a>
                 <div className="pf-data">
-                  <br />
-                  <h2>
-                    <a href={`https://www.youtube.com/channel/${title}`}>
-                      {title}
-                    </a>
-                  </h2>
-                  <p className="video-description">{modalVideo.description}</p>
+                  <strong>
+                    <h6>
+                      <a
+                        href={`https://www.youtube.com/channel/${title}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {title}
+                      </a>
+                    </h6>
+                  </strong>
+                  <p className="md-info-fecha">
+                    publicado en {modalVideo.fecha}
+                  </p>
+                  <p className="md-description">{modalVideo.description}</p>
                 </div>
                 <a
                   className="subscribe-btn"
