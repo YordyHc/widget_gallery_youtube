@@ -12,6 +12,7 @@ function VideoGallery({ videos, perfil }) {
   const currentVideos = videos.slice(startIndex, startIndex + itemsPerPage);
 
   const channelData = perfil.items?.[0];
+  const idcanal = channelData.id;
   const logoUrl = channelData.snippet?.thumbnails?.medium?.url;
   const title = channelData.snippet?.title || "Sin título";
   //const description = channelData.snippet?.description || "Sin descripción";
@@ -84,7 +85,7 @@ function VideoGallery({ videos, perfil }) {
               </div>
               <div className="profile-md">
                 <a
-                  href={`https://www.youtube.com/channel/${title}`}
+                  href={`https://www.youtube.com/channel/${idcanal}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -96,7 +97,7 @@ function VideoGallery({ videos, perfil }) {
                   <strong>
                     <h6>
                       <a
-                        href={`https://www.youtube.com/channel/${title}`}
+                        href={`https://www.youtube.com/channel/${idcanal}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -111,7 +112,7 @@ function VideoGallery({ videos, perfil }) {
                 </div>
                 <a
                   className="subscribe-btn"
-                  href={`https://www.youtube.com/channel/${title}`}
+                  href={`https://www.youtube.com/channel/${idcanal}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

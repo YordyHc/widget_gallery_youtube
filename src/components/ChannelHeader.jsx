@@ -3,6 +3,7 @@ function ChannelHeader({ channel }) {
 
   if (!channelData) return <div>Información del canal no disponible</div>;
 
+  const idcanal = channelData.id;
   const bannerUrl = channelData.brandingSettings?.image?.bannerExternalUrl;
   const betterBanner =
     bannerUrl + "=w2560-fcrop64=1,00000000ffffffff-nd-c0xffffffff-rj-k-no";
@@ -33,7 +34,11 @@ function ChannelHeader({ channel }) {
         <br />
         <br />
         <br />
-        <a href={`https://www.youtube.com/channel/${title}`}>
+        <a
+          href={`https://www.youtube.com/channel/${idcanal}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {logoUrl && (
             <img className="logo" src={logoUrl} alt="Logo del canal" />
           )}
@@ -41,7 +46,13 @@ function ChannelHeader({ channel }) {
         <div className="pf-data">
           <br />
           <h2>
-            <a href={`https://www.youtube.com/channel/${title}`}>{title}</a>
+            <a
+              href={`https://www.youtube.com/channel/${idcanal}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {title}
+            </a>
           </h2>
           <p className="stats">
             {Number(stats?.subscriberCount)} suscriptores • {stats?.videoCount}{" "}
@@ -50,7 +61,7 @@ function ChannelHeader({ channel }) {
         </div>
         <a
           className="subscribe-btn"
-          href={`https://www.youtube.com/channel/${title}`}
+          href={`https://www.youtube.com/channel/${idcanal}`}
           target="_blank"
           rel="noopener noreferrer"
         >
