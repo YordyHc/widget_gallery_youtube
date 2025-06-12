@@ -55,8 +55,9 @@ function ChannelHeader({ channel }) {
             </a>
           </h2>
           <p className="stats">
-            {Number(stats?.subscriberCount)} suscriptores • {stats?.videoCount}{" "}
-            videos • {Number(stats?.viewCount)} vistas
+            {redondeo(Number(stats?.subscriberCount))} suscriptores •{" "}
+            {redondeo(stats?.videoCount)} videos •{" "}
+            {redondeo(Number(stats?.viewCount))} vistas
           </p>
         </div>
         <a
@@ -65,7 +66,8 @@ function ChannelHeader({ channel }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Youtube {stats?.subscriberCount}
+          <i className="fa-brands fa-youtube"></i>Youtube{" "}
+          {redondeo(stats?.subscriberCount)}
         </a>
       </div>
     </div>
@@ -73,3 +75,15 @@ function ChannelHeader({ channel }) {
 }
 
 export default ChannelHeader;
+
+function redondeo(dato) {
+  if (dato >= 10000000) {
+    return (dato / 1000000).toFixed(1) + "M";
+  } else if (dato >= 1000000) {
+    return (dato / 1000000).toFixed(2) + "M";
+  } else if (dato >= 1000) {
+    return (dato / 1000).toFixed(1) + "K";
+  } else {
+    return dato.toString();
+  }
+}

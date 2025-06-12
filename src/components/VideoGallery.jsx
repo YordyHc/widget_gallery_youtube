@@ -29,7 +29,7 @@ function VideoGallery({ videos, perfil }) {
   return (
     <div className="gallery-container container-fluid">
       <button className="gallery-nav-btn gallery-prev" onClick={handlePrev}>
-        ≪
+        <i className="fa-solid fa-angle-left"></i>
       </button>
 
       <div className="gallery">
@@ -43,7 +43,7 @@ function VideoGallery({ videos, perfil }) {
       </div>
 
       <button className="gallery-nav-btn gallery-next" onClick={handleNext}>
-        ≫
+        <i className="fa-solid fa-angle-right"></i>
       </button>
 
       {/* PAGINACIÓN */}
@@ -80,8 +80,14 @@ function VideoGallery({ videos, perfil }) {
             <div className="modal-info">
               <h3 className="md_title">{modalVideo.title}</h3>
               <div className="md-stats">
-                <p className="md-info">{modalVideo.views} vistas </p>
-                <p className="md-info likes">{modalVideo.likes}</p>
+                <p className="md-info">
+                  {redondeo(modalVideo.views)} vistas{" "}
+                  <i className="fa-solid fa-eye"></i>
+                </p>
+                <p className="md-info likes">
+                  <i class="fa-solid fa-thumbs-up"></i>{" "}
+                  {redondeo(modalVideo.likes)}
+                </p>
               </div>
               <div className="profile-md">
                 <a
@@ -106,7 +112,7 @@ function VideoGallery({ videos, perfil }) {
                     </h6>
                   </strong>
                   <p className="md-info-fecha">
-                    publicado en {modalVideo.fecha}
+                    publicado en {formatearFecha(modalVideo.fecha)}
                   </p>
                   <p className="md-description">{modalVideo.description}</p>
                 </div>
@@ -116,7 +122,8 @@ function VideoGallery({ videos, perfil }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Youtube {stats?.subscriberCount}
+                  <i className="fa-brands fa-youtube"></i>Youtube{" "}
+                  {redondeo(stats?.subscriberCount)}
                 </a>
               </div>
             </div>
@@ -128,3 +135,23 @@ function VideoGallery({ videos, perfil }) {
 }
 
 export default VideoGallery;
+
+function redondeo(dato) {
+  if (dato >= 10000000) {
+    return (dato / 1000000).toFixed(1) + "M";
+  } else if (dato >= 1000000) {
+    return (dato / 1000000).toFixed(2) + "M";
+  } else if (dato >= 1000) {
+    return (dato / 1000).toFixed(1) + "K";
+  } else {
+    return dato.toString();
+  }
+}
+
+function formatearFecha(fechaISO) {
+  const fecha = new Date(fechaISO);
+  const dia = fecha.getDate().toString().padStart(2, "0");
+  const mes = (fecha.getMonth() + 1).toString().padStart(2, "0"); // ¡Meses inician desde 0!
+  const anio = fecha.getFullYear();
+  return `${dia}/${mes}/${anio}`;
+}
