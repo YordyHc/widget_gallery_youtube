@@ -25,6 +25,13 @@
   position: relative;
   display: inline-block;
 }
+
+@media (max-width: 1200px) {
+  .miniatura {
+    height: auto; /* Permite que el contenido determine la altura */
+    aspect-ratio: 16 / 9; /* opcional si quieres mantener proporción visual */
+  }
+}
 .thumbnail {
   position: absolute;
   top: 50%;
@@ -38,7 +45,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0.711);
   border: none;
   border-radius: 12%;
   width: 80px;
@@ -50,7 +57,7 @@
 }
 .video:hover {
   button {
-    background-color: rgba(255, 0, 0, 0.719);
+    background-color: rgb(255, 0, 0);
   }
   .video-title {
     text-decoration: underline;
@@ -85,6 +92,12 @@
 }
 .video-description {
   font-size: 12px;
+  min-height: 2.8em; /* Ajusta este valor según la altura de 2 líneas en tu fuente */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .video-info {
   font-size: 14px;
