@@ -1,3 +1,4 @@
+import { redondeo } from "../utils/formatUtils";
 function ChannelHeader({ channel }) {
   const channelData = channel.items?.[0];
 
@@ -75,15 +76,3 @@ function ChannelHeader({ channel }) {
 }
 
 export default ChannelHeader;
-
-function redondeo(dato) {
-  if (dato >= 10000000) {
-    return (dato / 1000000).toFixed(1) + "M";
-  } else if (dato >= 1000000) {
-    return (dato / 1000000).toFixed(2) + "M";
-  } else if (dato >= 1000) {
-    return (dato / 1000).toFixed(1) + "K";
-  } else {
-    return dato.toString();
-  }
-}

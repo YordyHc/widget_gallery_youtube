@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VideoCard from "./VideoCard";
+import { redondeo, formatearFecha } from "../utils/formatUtils";
 
 function VideoGallery({ videos, perfil }) {
   const [currentPage, setCurrentPage] = useState(0);
@@ -85,7 +86,7 @@ function VideoGallery({ videos, perfil }) {
                   <i className="fa-solid fa-eye"></i>
                 </p>
                 <p className="md-info likes">
-                  <i class="fa-solid fa-thumbs-up"></i>{" "}
+                  <i className="fa-solid fa-thumbs-up"></i>{" "}
                   {redondeo(modalVideo.likes)}
                 </p>
               </div>
@@ -135,23 +136,3 @@ function VideoGallery({ videos, perfil }) {
 }
 
 export default VideoGallery;
-
-function redondeo(dato) {
-  if (dato >= 10000000) {
-    return (dato / 1000000).toFixed(1) + "M";
-  } else if (dato >= 1000000) {
-    return (dato / 1000000).toFixed(2) + "M";
-  } else if (dato >= 1000) {
-    return (dato / 1000).toFixed(1) + "K";
-  } else {
-    return dato.toString();
-  }
-}
-
-function formatearFecha(fechaISO) {
-  const fecha = new Date(fechaISO);
-  const dia = fecha.getDate().toString().padStart(2, "0");
-  const mes = (fecha.getMonth() + 1).toString().padStart(2, "0"); // ¡Meses inician desde 0!
-  const anio = fecha.getFullYear();
-  return `${dia}/${mes}/${anio}`;
-}
