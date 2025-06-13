@@ -1,6 +1,6 @@
 import { useState } from "react";
 import VideoCard from "./VideoCard";
-import { redondeo, formatearFecha } from "../utils/formatUtils";
+import VideoModal from "./VideoModal";
 
 function VideoGallery({ videos, perfil }) {
   const [currentPage, setCurrentPage] = useState(0);
@@ -27,6 +27,16 @@ function VideoGallery({ videos, perfil }) {
     setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
   };
 
+  const paginacionBotones = Array.from({ length: totalPages }, (_, index) => (
+    <button
+      key={index}
+      className={`paginat-btn ${index === currentPage ? "active" : ""}`}
+      onClick={() => setCurrentPage(index)}
+    >
+      {index + 1}
+    </button>
+  ));
+
   return (
     <div className="gallery-container container-fluid">
       <button className="gallery-nav-btn gallery-prev" onClick={handlePrev}>
@@ -48,89 +58,14 @@ function VideoGallery({ videos, perfil }) {
       </button>
 
       {/* PAGINACIÓN */}
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            className={`paginat-btn ${index === currentPage ? "active" : ""}`}
-            onClick={() => setCurrentPage(index)}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      <div className="pagination">{paginacionBotones}</div>
 
       {/* MODAL */}
-      {modalVideo && (
-        <div className="modal-overlay" onClick={() => setModalVideo(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setModalVideo(null)}>
-              ×
-            </button>
-            <div className="video-iframe-container">
-              <iframe
-                width="100%"
-                height="400"
-                src={`https://www.youtube.com/embed/${modalVideo.videoId}?autoplay=1`}
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title={modalVideo.title}
-              ></iframe>
-            </div>
-            <div className="modal-info">
-              <h3 className="md_title">{modalVideo.title}</h3>
-              <div className="md-stats">
-                <p className="md-info">
-                  {redondeo(modalVideo.views)} vistas{" "}
-                  <i className="fa-solid fa-eye"></i>
-                </p>
-                <p className="md-info likes">
-                  <i className="fa-solid fa-thumbs-up"></i>{" "}
-                  {redondeo(modalVideo.likes)}
-                </p>
-              </div>
-              <div className="profile-md">
-                <a
-                  href={`https://www.youtube.com/channel/${idcanal}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {logoUrl && (
-                    <img className="logo" src={logoUrl} alt="Logo del canal" />
-                  )}
-                </a>
-                <div className="pf-data">
-                  <strong>
-                    <h6>
-                      <a
-                        href={`https://www.youtube.com/channel/${idcanal}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {title}
-                      </a>
-                    </h6>
-                  </strong>
-                  <p className="md-info-fecha">
-                    publicado en {formatearFecha(modalVideo.fecha)}
-                  </p>
-                  <p className="md-description">{modalVideo.description}</p>
-                </div>
-                <a
-                  className="subscribe-btn"
-                  href={`https://www.youtube.com/channel/${idcanal}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-youtube"></i>Youtube{" "}
-                  {redondeo(stats?.subscriberCount)}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <VideoModal
+        video={modalVideo}
+        canal={{ id: idcanal, logoUrl, title, stats }}
+        onClose={() => setModalVideo(null)}
+      />
     </div>
   );
 }

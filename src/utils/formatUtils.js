@@ -1,5 +1,8 @@
 // utils/formatUtils.js o formatUtils.ts
 export function redondeo(dato) {
+  if (dato === undefined || dato === null || isNaN(dato)) {
+    return "0.00";
+  }
   if (dato >= 10000000) {
     return (dato / 1000000).toFixed(1) + "M";
   } else if (dato >= 1000000) {
