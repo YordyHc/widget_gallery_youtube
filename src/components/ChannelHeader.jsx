@@ -1,17 +1,14 @@
 import { redondeo } from "../utils/formatUtils";
 function ChannelHeader({ channel }) {
-  const channelData = channel.items?.[0];
+  if (!channel) return <div>Información del canal no disponible</div>;
 
-  if (!channelData) return <div>Información del canal no disponible</div>;
-
-  const idcanal = channelData.id;
-  const bannerUrl = channelData.brandingSettings?.image?.bannerExternalUrl;
-  const betterBanner =
-    bannerUrl + "=w2560-fcrop64=1,00000000ffffffff-nd-c0xffffffff-rj-k-no";
-  const logoUrl = channelData.snippet?.thumbnails?.medium?.url;
-  const title = channelData.snippet?.title || "Sin título";
-  //const description = channelData.snippet?.description || "Sin descripción";
-  const stats = channelData.statistics;
+  const idcanal = channel.idcanal;
+  const betterBanner = channel.bannerImage;
+  const logoUrl = channel.logoUrl;
+  const title = channel.title;
+  const subs = channel.subscriberCount;
+  const views = channel.viewCount;
+  const videoCount = channel.videoCount;
 
   return (
     <div className="channel-header">
@@ -56,9 +53,9 @@ function ChannelHeader({ channel }) {
             </a>
           </h2>
           <p className="stats">
-            {redondeo(Number(stats?.subscriberCount))} suscriptores •{" "}
-            {redondeo(stats?.videoCount)} videos •{" "}
-            {redondeo(Number(stats?.viewCount))} vistas
+            {redondeo(Number(subs))} suscriptores •{" "}
+            {redondeo(Number(videoCount))} videos • {redondeo(Number(views))}{" "}
+            vistas
           </p>
         </div>
         <a
@@ -67,8 +64,7 @@ function ChannelHeader({ channel }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa-brands fa-youtube"></i>Youtube{" "}
-          {redondeo(stats?.subscriberCount)}
+          <i className="fa-brands fa-youtube"></i>Youtube {redondeo(subs)}
         </a>
       </div>
     </div>

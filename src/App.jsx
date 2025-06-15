@@ -9,49 +9,34 @@ function App() {
   const [channel, setChannel] = useState(null);
   const [videos, setVideos] = useState([]);
 
+  const channelId = "UCCfPkh8osJPC2pPq283kKXg"; // ID del canal
+  const BACKEND_BASE_URL = "http://localhost:8000/api/youtube/youtube";
+
   useEffect(() => {
     // Cargar datos del canal
-    fetch("/data/channel.json")
+    fetch(`${BACKEND_BASE_URL}/channel-info/?channelId=${channelId}`)
       .then((res) => res.json())
       .then((data) => setChannel(data))
-      .catch((err) => console.error("Error loading channel.json:", err));
+      .catch((err) => console.error("Error al cargar canal:", err));
 
-    // Cargar datos de videos y estadísticas en paralelo
-    Promise.all([
-      fetch("/data/videos.json").then((res) => res.json()),
-      fetch("/data/stats.json").then((res) => res.json()),
-    ])
-      .then(([videosData, statsData]) => {
-        const videoInfo = videosData.items.map((video) => {
-          const videoId = video.id.videoId;
-          const stats = statsData.items.find((stat) => stat.id === videoId);
-
-          return {
-            videoId,
-            thumbnail: video.snippet.thumbnails.high.url,
-            title: video.snippet.title,
-            fecha: video.snippet.publishedAt,
-            description: video.snippet.description,
-            duration: stats?.contentDetails?.duration || "00:00",
-            views: stats?.statistics?.viewCount || "0",
-            likes: stats?.statistics?.likeCount || "0",
-            comments: stats?.statistics?.commentCount || "0",
-          };
-        });
-
-        setVideos(videoInfo);
-      })
-      .catch((err) => console.error("Error loading videos or stats:", err));
+    // Cargar videos procesados desde el backend
+    0; /* fetch(
+      `${BACKEND_BASE_URL}/videos-info/?channelId=${channelId}&maxResults=10`
+    )
+      .then((res) => res.json())
+      .then((data) => setVideos(data.videos))
+      .catch((err) => console.error("Error al cargar videos:", err));*/
   }, []);
 
-  if (!channel || videos.length === 0) {
+  /*if (!channel || videos.length === 0) {
     return <p>Cargando...</p>;
-  }
+  }*/
+  console.log();
 
   return (
     <>
       <ChannelHeader channel={channel} />
-      <VideoGallery videos={videos} perfil={channel} />
+      {/*<VideoGallery videos={videos} perfil={channel} /> */}
     </>
   );
 }
