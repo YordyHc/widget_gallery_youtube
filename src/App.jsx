@@ -18,25 +18,22 @@ function App() {
       .then((res) => res.json())
       .then((data) => setChannel(data))
       .catch((err) => console.error("Error al cargar canal:", err));
-
-    // Cargar videos procesados desde el backend
-    0; /* fetch(
+    fetch(
       `${BACKEND_BASE_URL}/videos-info/?channelId=${channelId}&maxResults=10`
     )
       .then((res) => res.json())
       .then((data) => setVideos(data.videos))
-      .catch((err) => console.error("Error al cargar videos:", err));*/
+      .catch((err) => console.error("Error al cargar videos:", err));
   }, []);
 
-  /*if (!channel || videos.length === 0) {
+  if (!channel || videos.length === 0) {
     return <p>Cargando...</p>;
-  }*/
-  console.log();
+  }
 
   return (
     <>
       <ChannelHeader channel={channel} />
-      {/*<VideoGallery videos={videos} perfil={channel} /> */}
+      <VideoGallery videos={videos} perfil={channel} />
     </>
   );
 }

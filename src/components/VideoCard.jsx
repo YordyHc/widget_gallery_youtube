@@ -21,11 +21,11 @@ function VideoCard({ video, onPlay }) {
       <p className="video-title">
         <strong>{video.title}</strong>
       </p>
-      <p className="video-info">{formatearFecha(video.fecha)}</p>
-      <p className="video-description">{video?.description}</p>
+      <p className="video-info">{formatearFecha(video.publishedAt)}</p>
+      <p className="video-description">{video.description}</p>
       <p className="video-info">
-        {redondeo(video.views)} vistas • {redondeo(video.likes)} likes •{" "}
-        {redondeo(video.comments)} comentarios
+        {redondeo(video.viewCount)} vistas • {redondeo(video.likeCount)} likes •{" "}
+        {redondeo(video.commentCount)} comentarios
       </p>
     </div>
   );

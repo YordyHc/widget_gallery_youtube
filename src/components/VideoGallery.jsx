@@ -12,13 +12,6 @@ function VideoGallery({ videos, perfil }) {
   const startIndex = currentPage * itemsPerPage;
   const currentVideos = videos.slice(startIndex, startIndex + itemsPerPage);
 
-  const channelData = perfil.items?.[0];
-  const idcanal = channelData.id;
-  const logoUrl = channelData.snippet?.thumbnails?.medium?.url;
-  const title = channelData.snippet?.title || "Sin título";
-  //const description = channelData.snippet?.description || "Sin descripción";
-  const stats = channelData.statistics;
-
   const handlePrev = () => {
     setCurrentPage((prev) => Math.max(prev - 1, 0));
   };
@@ -46,7 +39,7 @@ function VideoGallery({ videos, perfil }) {
       <div className="gallery">
         {currentVideos.map((video) => (
           <VideoCard
-            key={video.videoId}
+            key={video.id}
             video={video}
             onPlay={() => setModalVideo(video)}
           />
@@ -63,7 +56,7 @@ function VideoGallery({ videos, perfil }) {
       {/* MODAL */}
       <VideoModal
         video={modalVideo}
-        canal={{ id: idcanal, logoUrl, title, stats }}
+        canal={perfil}
         onClose={() => setModalVideo(null)}
       />
     </div>

@@ -3,12 +3,26 @@ export function redondeo(dato) {
   if (dato === undefined || dato === null || isNaN(dato)) {
     return "0.00";
   }
-  if (dato >= 10000000) {
+  if (dato >= 1_000_000_000) {
+    let valor = dato / 1_000_000_000;
+    let valorRedondeado = valor.toFixed(1);
+
+    if (valorRedondeado.endsWith(".0")) {
+      return Math.floor(valor) + "B";
+    }
+    return valorRedondeado + "B";
+  } else if (dato >= 10000000) {
     return (dato / 1000000).toFixed(1) + "M";
   } else if (dato >= 1000000) {
     return (dato / 1000000).toFixed(2) + "M";
   } else if (dato >= 1000) {
-    return (dato / 1000).toFixed(1) + "K";
+    let valor = dato / 1000;
+    let valorRedondeado = valor.toFixed(1);
+
+    if (valorRedondeado.endsWith(".0")) {
+      return Math.floor(valor) + "K";
+    }
+    return valorRedondeado + "K";
   } else {
     return dato.toString();
   }
