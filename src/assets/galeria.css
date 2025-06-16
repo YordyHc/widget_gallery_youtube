@@ -118,7 +118,7 @@
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,13 +180,13 @@
   display: flex;
   justify-content: center; /* Centrado horizontal */
   padding-top: 4%;
-  z-index: 999;
+  z-index: 10;
 }
 
 .modal-content {
-  background-color: none;
+  background-color: #0091ff00;
   width: 71%;
-  overflow-y: auto; /* Permite scroll vertical */
+  overflow-y: auto;
 }
 
 .video-iframe-container {
@@ -217,13 +217,20 @@
 }
 
 .modal-close {
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  background: #7e7e7e81;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  background: none;
+  top: 4%;
+  right: 11%;
+  font-size: 1.2rem;
   border: none;
   cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
 }
 
 .profile-md {

@@ -5,10 +5,10 @@ function VideoModal({ video, canal, onClose }) {
   const logoUrl = canal.logoUrl;
   return (
     <div className="modal-overlay" onClick={onClose}>
+      <button className="modal-close" onClick={onClose}>
+        <i className="fa-solid fa-xmark"></i>
+      </button>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          ×
-        </button>
         <div className="video-iframe-container">
           <iframe
             width="100%"
