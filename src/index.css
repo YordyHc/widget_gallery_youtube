@@ -70,11 +70,18 @@ body {
 }
 
 @media (max-width: 600px) {
+  .profile {
+    height: 90px;
+  }
   .profile h2 {
-    font-size: 19px;
+    font-size: 17px;
     margin: 0;
     flex-direction: column;
     align-items: center;
+  }
+  .profile img {
+    width: 50px;
+    height: auto;
   }
   .stats {
     font-size: 12px;
@@ -83,7 +90,7 @@ body {
   }
   .subscribe-btn {
     padding: 6px 10px;
-    font-size: 11px;
+    font-size: 10.5px;
     border-radius: 8px;
     margin-right: 15px;
   }

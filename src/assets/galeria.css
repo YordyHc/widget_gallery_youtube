@@ -144,6 +144,30 @@
   .gallery-next {
     right: 5px;
   }
+  .video-title {
+    font-size: 13px;
+  }
+  .play-button {
+    width: 50px;
+    height: 30px; /* Permite que el contenido determine la altura */
+  }
+  .video-duration {
+    padding: 2px 3px;
+    font-size: 11px;
+  }
+  .video-info {
+    font-size: 12px;
+  }
+  .gallery-nav-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .modal-close {
+    display: none;
+  }
+  .md_title {
+    font-size: 15px;
+  }
 }
 
 .pagination {
