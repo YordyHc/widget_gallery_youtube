@@ -20,7 +20,7 @@ function ChannelHeader({ channel }) {
             alt="Banner del canal"
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = bannerUrl;
+              e.target.src = betterBanner;
             }}
           />
         </>
