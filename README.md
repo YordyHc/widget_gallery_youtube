@@ -1,85 +1,49 @@
 # WIDGET GALLERY YOUTUBE
 
-Proyecto web dedicado a una galería de YouTube de un canal de YouTube mediante su ID.
+Un widget para galeria de un canal de youtube
 
-### Imagen de referencia:
 ![Captura de pantalla 2025-02-25 184359](https://github.com/user-attachments/assets/45b23817-c756-4b3f-920f-0b0010f1018d)
 
 ---
 
-### TECNOLOGÍAS USADAS
-- **PHP**
-- **HTML**
-- **CSS**
-- **Javascript**
+### CARACTERISTICAS
+
+- Espacio donde se presentan los datos del canal de youtube, como la imagen de portada, logo, nombre, cantidad de subscriptores, videos y likes.
+
+- Los videos del canal son presentados en un carrusel y cada componente presenta la minuatura, titulo, descripcion (sí posee), fecha de publicacion, catidad de likes, vistas y comentarios.
+- El video es visualisado en una ventana modal
 
 ---
 
-### FRAMEWORK
-- **Bootstrap 5**
-  
----
-
-### SERVICIOS A USAR
-- **YouTube Data API**
-
----
-
-### ¿CÓMO USAR?
-Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
+### ¿DESEAS USAR LA PLANTILLA?
 
 1. **Descargar el repositorio**:
-   Clona o descarga el repositorio en tu computadora.
 
-2. **Configurar el archivo "config.php"**:
-   - Dirígete al archivo `config.php` que se encuentra en la raíz del proyecto.
-   - Define tu **LLAVE API YOUTUBE** en la variable `API_KEY`. Si no tienes una, puedes obtenerla siguiendo el manual:
-     - [CONCEPTOS BÁSICOS DE YOUTUBE Y LA API](https://developers.google.com/youtube/v3/getting-started?hl=es-419)
+- Clona o descarga el repositorio en tu computadora.
 
-3. **Obtener el ID DEL CANAL**:
-   - Dirígete a la página del canal de YouTube en tu navegador.
-   - Haz clic derecho en la página y selecciona **Ver código fuente de la página**.
-   - Busca la palabra **"channelId"** (puedes usar **Ctrl + F** en la mayoría de los navegadores para buscarlo).
-   - El **ID del canal** aparecerá como parte de un bloque de código JSON, algo como esto:
-     ```json
-     "channelId": "UCxxxxxxxxxxxxxxxxxx"
-     ```
-   - Copia el **ID del canal** y pégalo en la variable `CHANNEL_ID` dentro del archivo `config.php`.
+2. **Instalar las dependencias del proyecto**
 
-4. **Ejecutar el proyecto**:
-   Para ejecutar el proyecto en tu entorno de desarrollo local, sigue estos pasos:
+- Ingresa a la carpeta del proyecto mediante una terminal y ejecuta `npm install`
 
----
+> [!IMPORTANT] > `npm install` es un comando para la terminal de Powershell, busca un equivalente para la terminal de tu preferencia
 
-#### Opción A: Usando XAMPP
+3. **Ejecutar el proyecto**
 
-1. **Instalar XAMPP**:
-   - Si no tienes XAMPP instalado, ve a [XAMPP](https://www.apachefriends.org/es/index.html) y descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).
-   - Instala XAMPP y asegúrate de que Apache y MySQL estén corriendo.
+- En la terminal, ejecuta el comando `npm run dev`.
 
-2. **Colocar el proyecto en la carpeta "htdocs"**:
-   - Dirígete a la carpeta donde instalaste XAMPP, usualmente en `C:\xampp\htdocs` (en Windows).
-   - Coloca la carpeta del proyecto dentro de `htdocs` (por ejemplo, `C:\xampp\htdocs\widget-gallery`).
+- Una vez cargado, en el navegador de preferencia ingrese `http://localhost:5173/`, el proyecto debe ejecutarse con seguridad.
 
-3. **Abrir el proyecto en tu navegador**:
-   - Abre tu navegador y ve a `http://localhost/widget-gallery` (si nombraste la carpeta del proyecto "widget-gallery").
-   - ¡El proyecto debería funcionar!
+4. **Asignar el canal de youtube de su preferencia**:
 
----
+- Dirígete a la ruta `config/appConfig.js`, encuentra "config" en la raíz del proyecto.
+- Reemplaze el valor de la variable `handle` con el username del canal de youtube que desée.
+- `handle` aparecerá como parte de un bloque de código JS, algo como esto:
 
-#### Opción B: Usando Laragon
+  ```js
+  const appConfig = {
+    handle: "@username",
+  };
+  ```
 
-1. **Instalar Laragon**:
-   - Si prefieres usar Laragon, ve a [Laragon](https://laragon.org/) y descarga la última versión.
-   - Instala Laragon en tu sistema.
-
-2. **Colocar el proyecto en la carpeta "www"**:
-   - Dirígete a la carpeta `www` dentro de Laragon (por lo general, `C:\laragon\www`).
-   - Coloca la carpeta del proyecto dentro de `www` (por ejemplo, `C:\laragon\www\widget-gallery`).
-
-3. **Abrir el proyecto en tu navegador**:
-   - Abre tu navegador y ve a `http://localhost/widget-gallery` (si nombraste la carpeta del proyecto "widget-gallery").
-   - ¡El proyecto debería funcionar!
-
----
-
+  > [!TIP]
+  > Encuentra el @username en el inicio del canal de youtube
