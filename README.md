@@ -2,7 +2,7 @@
 
 Un **widget visual interactivo** para mostrar la galería de videos de un canal de YouTube, integrando datos del canal y visualización en un carrusel con modal.
 
-![Captura del widget](https://github.com/user-attachments/assets/45b23817-c756-4b3f-920f-0b0010f1018d)
+![Captura de pantalla 2025-06-17 011403](https://github.com/user-attachments/assets/23e921df-5425-4e65-bac3-ea63b9f44cf1)
 
 ---
 
@@ -15,6 +15,7 @@ Un **widget visual interactivo** para mostrar la galería de videos de un canal 
 * [🔧 Configuración del canal](#-configuración-del-canal)
 * [🧑‍💻 Créditos](#-créditos)
 * [📝 Licencia](#-licencia)
+
 
 ---
 
@@ -35,6 +36,10 @@ Un **widget visual interactivo** para mostrar la galería de videos de un canal 
   * Likes, vistas y comentarios
 * Modal interactivo para reproducir los videos
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e96f01a7-5f46-48de-b61d-63f74b1efdb2" alt="Vista previa del widget" width="800" />
+</div>
+
 ---
 
 ## 🔧 Tecnologías utilizadas
@@ -45,6 +50,7 @@ Un **widget visual interactivo** para mostrar la galería de videos de un canal 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+
 
 ---
 
@@ -58,6 +64,7 @@ Este proyecto originalmente fue desarrollado con:
 * CSS
 
 Y fue **reescrito desde cero con React y Vite**, aplicando principios de componentes reutilizables, arquitectura moderna y mejoras en rendimiento, diseño y mantenibilidad.
+
 
 ---
 
@@ -87,6 +94,7 @@ Y fue **reescrito desde cero con React y Vite**, aplicando principios de compone
 
    Accede a `http://localhost:5173/` en tu navegador.
 
+
 ---
 
 ## 🔧 Configuración del canal
@@ -110,11 +118,13 @@ Para personalizar el widget con el canal que desees:
 > [!NOTE]
 > Puedes encontrar el `@username` del canal en la página principal del mismo.
 
+
 ---
 
 ## 🧑‍💻 Créditos
 
 Proyecto realizado por **Yordy Huaman C.**
+
 
 ---
 
