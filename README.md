@@ -104,7 +104,7 @@ Para personalizar el widget con el canal que desees:
 1. Abre el archivo:
 
    ```
-   config/appConfig.js
+   src/config/appConfig.js
    ```
 
 2. Reemplaza el valor de `handle` con el *username* del canal de YouTube:
@@ -116,7 +116,7 @@ Para personalizar el widget con el canal que desees:
    ```
 
 > [!NOTE]
-> Puedes encontrar el `@username` del canal en la página principal del mismo.
+> Puedes encontrar el `@username` del canal que quieres en la página principal del mismo.
 
 
 ---
