@@ -1,10 +1,13 @@
 import { redondeo } from "../utils/formatUtils";
+
 function ChannelHeader({ channel }) {
   if (!channel) return <div>Información del canal no disponible</div>;
 
   const idcanal = channel.idcanal;
   const betterBanner = channel.bannerImage;
+  const bannerDefault = "/banner_default.png";
   const logoUrl = channel.logoUrl;
+  const logoDefault = "/logo_default.png";
   const title = channel.title;
   const subs = channel.subscriberCount;
   const views = channel.viewCount;
@@ -12,19 +15,15 @@ function ChannelHeader({ channel }) {
 
   return (
     <div className="channel-header">
-      {betterBanner && (
-        <>
-          <img
-            className="channel-banner"
-            src={betterBanner}
-            alt="Banner del canal"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = betterBanner;
-            }}
-          />
-        </>
-      )}
+      <img
+        className="channel-banner"
+        src={betterBanner || bannerDefault}
+        alt="Banner del canal"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = bannerDefault;
+        }}
+      />
 
       <div className="profile">
         <br />
@@ -37,9 +36,15 @@ function ChannelHeader({ channel }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {logoUrl && (
-            <img className="logo" src={logoUrl} alt="Logo del canal" />
-          )}
+          <img
+            className="logo"
+            src={logoUrl || logoDefault}
+            alt="Logo del canal"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = logoDefault;
+            }}
+          />
         </a>
         <div className="pf-data">
           <br />
@@ -64,7 +69,7 @@ function ChannelHeader({ channel }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa-brands fa-youtube"></i>Youtube {redondeo(subs)}
+          <i className="fa-brands fa-youtube"></i> Youtube {redondeo(subs)}
         </a>
       </div>
     </div>
