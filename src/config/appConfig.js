@@ -1,5 +1,5 @@
 const appConfig = {
-  handle: "@ClipsTop-x1p",
+  handle: "@NetflixLATAM", //Siempre con @
 };
 
 export default appConfig;

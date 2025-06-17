@@ -12,20 +12,18 @@ function App() {
 
   const [channelId, setChannelId] = useState(null);
   const handle = appConfig.handle;
-  //const BACKEND_BASE_URL = "http://localhost:8000/api/youtube/youtube";
-  //${BACKEND_BASE_URL}/channel-info/?forHandle=${handle}
-  //${BACKEND_BASE_URL}/videos-info/?channelId=${channelId}
-  // Paso 1: obtener información del canal usando el handle
+  const BACKEND_BASE_URL =
+    "https://api-widget-youtube.onrender.com/api/youtube/youtube";
+
   useEffect(() => {
-    console.log("Handle:", handle);
     if (!handle) return;
 
-    fetch(`/data/canal.json`)
+    fetch(`${BACKEND_BASE_URL}/channel-info/?forHandle=${handle}`)
       .then((res) => res.json())
       .then((data) => {
         setChannel(data);
         if (data.idcanal) {
-          setChannelId(data.idcanal); // Guardar channelId para el siguiente paso
+          setChannelId(data.idcanal);
         }
       })
       .catch((err) => console.error("Error al cargar canal:", err));
@@ -34,7 +32,7 @@ function App() {
   useEffect(() => {
     if (!channelId) return;
 
-    fetch(`/data/videos_cambiado.json`)
+    fetch(`${BACKEND_BASE_URL}/videos-info/?channelId=${channelId}`)
       .then((res) => res.json())
       .then((data) => {
         setVideos(data.videos);
