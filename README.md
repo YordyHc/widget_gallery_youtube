@@ -1,49 +1,133 @@
 # WIDGET GALLERY YOUTUBE
 
-Un widget para galeria de un canal de youtube
+Un **widget visual interactivo** para mostrar la galería de videos de un canal de YouTube, integrando datos del canal y visualización en un carrusel con modal.
 
-![Captura de pantalla 2025-02-25 184359](https://github.com/user-attachments/assets/45b23817-c756-4b3f-920f-0b0010f1018d)
-
----
-
-### CARACTERISTICAS
-
-- Espacio donde se presentan los datos del canal de youtube, como la imagen de portada, logo, nombre, cantidad de subscriptores, videos y likes.
-
-- Los videos del canal son presentados en un carrusel y cada componente presenta la minuatura, titulo, descripcion (sí posee), fecha de publicacion, catidad de likes, vistas y comentarios.
-- El video es visualisado en una ventana modal
+![Captura de pantalla 2025-06-17 011403](https://github.com/user-attachments/assets/23e921df-5425-4e65-bac3-ea63b9f44cf1)
 
 ---
 
-### ¿DESEAS USAR LA PLANTILLA?
+## 📚 Tabla de Contenidos
 
-1. **Descargar el repositorio**:
+* [🚀 Características](#-características)
+* [🔧 Tecnologías utilizadas](#-tecnologías-utilizadas)
+* [🔄 Evolución del proyecto](#-evolución-del-proyecto)
+* [⚙️ Instalación](#-Instalación)
+* [🔧 Configuración del canal](#-configuración-del-canal)
+* [🧑‍💻 Créditos](#-créditos)
+* [📝 Licencia](#-licencia)
 
-- Clona o descarga el repositorio en tu computadora.
 
-2. **Instalar las dependencias del proyecto**
+---
 
-- Ingresa a la carpeta del proyecto mediante una terminal y ejecuta `npm install`
+## 🚀 Características
 
-> [!IMPORTANT] > `npm install` es un comando para la terminal de Powershell, busca un equivalente para la terminal de tu preferencia
+* Visualización de datos del canal de YouTube:
 
-3. **Ejecutar el proyecto**
+  * Imagen de portada
+  * Logo
+  * Nombre del canal
+  * Suscriptores, videos y likes
+* Galería de videos con:
 
-- En la terminal, ejecuta el comando `npm run dev`.
+  * Miniatura
+  * Título
+  * Descripción (si aplica)
+  * Fecha de publicación
+  * Likes, vistas y comentarios
+* Modal interactivo para reproducir los videos
 
-- Una vez cargado, en el navegador de preferencia ingrese `http://localhost:5173/`, el proyecto debe ejecutarse con seguridad.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e96f01a7-5f46-48de-b61d-63f74b1efdb2" alt="Vista previa del widget" width="800" />
+</div>
 
-4. **Asignar el canal de youtube de su preferencia**:
+---
 
-- Dirígete a la ruta `config/appConfig.js`, encuentra "config" en la raíz del proyecto.
-- Reemplaze el valor de la variable `handle` con el username del canal de youtube que desée.
-- `handle` aparecerá como parte de un bloque de código JS, algo como esto:
+## 🔧 Tecnologías utilizadas
 
-  ```js
-  const appConfig = {
-    handle: "@username",
-  };
-  ```
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 
-  > [!TIP]
-  > Encuentra el @username en el inicio del canal de youtube
+
+---
+
+## 🔄 Evolución del proyecto
+
+Este proyecto originalmente fue desarrollado con:
+
+* PHP
+* HTML
+* JavaScript
+* CSS
+
+Y fue **reescrito desde cero con React y Vite**, aplicando principios de componentes reutilizables, arquitectura moderna y mejoras en rendimiento, diseño y mantenibilidad.
+
+
+---
+
+## ⚙️ Instalación
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone https://github.com/tu_usuario/widget-gallery-youtube.git
+   cd widget-gallery-youtube
+   ```
+
+2. **Instalar dependencias**
+
+   ```bash
+   npm install
+   ```
+
+> [!IMPORTANT]
+> *Este comando funciona en terminales bash, zsh, PowerShell o CMD.*
+
+3. **Ejecutar el proyecto en desarrollo**
+
+   ```bash
+   npm run dev
+   ```
+
+   Accede a `http://localhost:5173/` en tu navegador.
+
+
+---
+
+## 🔧 Configuración del canal
+
+Para personalizar el widget con el canal que desees:
+
+1. Abre el archivo:
+
+   ```
+   config/appConfig.js
+   ```
+
+2. Reemplaza el valor de `handle` con el *username* del canal de YouTube:
+
+   ```js
+   const appConfig = {
+     handle: "@nombreDeUsuario",
+   };
+   ```
+
+> [!NOTE]
+> Puedes encontrar el `@username` del canal en la página principal del mismo.
+
+
+---
+
+## 🧑‍💻 Créditos
+
+Proyecto realizado por **Yordy Huaman C.**
+
+
+---
+
+## 📝 Licencia
+
+MIT License – [LICENSE](./LICENSE)
